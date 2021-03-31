@@ -1,25 +1,18 @@
-# config ospf neighbour interfaces on device
-interface {{ospf-interface}}
-ip address {{ospf-interface-ipaddr}} {{ospf-interface-ipaddr-mask}}
+interface f0/0
+ip address {{item.ospf_interface_ipaddr}} {{item.ospf_interface_ipaddr_mask}}
 
 
-# config loopback interfaces on device
+
 interface loopback 0
-ip address {{loop0-ipaddr}} {{loop0-ipaddr-mask}}
+ip address {{item.loop0_ipaddr}} {{item.loop0_ipaddr_mask}}
 
 interface loopback 1
-ip address {{loop1-ipaddr}} {{loop1-ipaddr-mask}}
+ip address {{item.loop1_ipaddr}} {{item.loop1_ipaddr_mask}}
 
-# ospf initialization
+
 router ospf 11
 
-# advertise to create neighbourstat
-#network {{ PH }} 0.0.0.0 area 0
 
-# advertise for networks
-network {{ospf-interface-ipaddr}} 0.0.0.0 area 0
-network {{loop0-ipaddr}} 0.0.0.0 area 0
-network {{loop1-ipaddr}} 0.0.0.0 area 0
-
-
-
+network {{item.ospf_interface_ipaddr}} 0.0.0.0 area 0
+network {{item.loop0_ipaddr}} 0.0.0.0 area 0
+network {{item.loop1_ipaddr}} 0.0.0.0 area 0

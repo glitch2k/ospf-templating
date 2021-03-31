@@ -1,7 +1,5 @@
 ---
-- name: Config OSPF on routers
-  template:
-    src=full-device-config.j2 
-    dest={{ item.hostname }}.cfg
+- name: Generate configuration files 
+  template: src=full-device-config.j2 dest={{item.hostname}}.cfg
   with_items: 
-   {{ routers }}
+    "{{ routers }}"
