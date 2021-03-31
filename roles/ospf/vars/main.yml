@@ -1,0 +1,20 @@
+---
+routers: 
+  - hostname: R1
+    ospf-interface: f0/0
+    ospf-interface-ipaddr: 12.12.12.1
+    ospf-interface-mask: 255.255.255.0
+    loop0-ipaddr: 1.1.1.1 
+    loop0-ipaddr-mask: 255.255.255.255
+    loop1-ipaddr: 1.1.1.2 
+    loop1-ipaddr-mask: 255.255.255.255 
+
+  - hostname: R2
+    ospf-interface: f0/0
+    ospf-interface-ipaddr: 12.12.12.2
+    ospf-interface-mask: 255.255.255.0
+    loop0-ipaddr: 2.2.2.1 
+    loop0-ipaddr-mask: 255.255.255.255
+    loop1-ipaddr: 2.2.2.2 
+    loop1-ipaddr-mask: 255.255.255.255 
+
