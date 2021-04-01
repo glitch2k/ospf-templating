@@ -1,0 +1,5 @@
+---
+providers:
+  username: cisco
+  password: cisco12345
+  host: "{{ inventory_hostname }}"
