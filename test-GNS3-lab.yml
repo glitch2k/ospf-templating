@@ -5,7 +5,6 @@
   gather_facts: no
 
   tasks:
-#  runs the show cdp neighbor command and saves the output to a variable called results
     - name: PLAY 01 --- RUN "sh ip int br" CMD
       ios_command:
         commands: sh ip int br

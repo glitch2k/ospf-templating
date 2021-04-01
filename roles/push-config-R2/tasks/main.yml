@@ -1,0 +1,10 @@
+---
+- name: Push configuration files to R2
+  ios_config: 
+    src: "R2.cfg"
+
+- name: Unshut OSPF interface on R2
+  ios_config:
+    lines:
+      - no sh
+    parents: interface f0/0
