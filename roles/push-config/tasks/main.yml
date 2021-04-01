@@ -1,5 +1,0 @@
----
-- name: Generate configuration files 
-  ios_config: 
-    src: R1.cfg 
-    

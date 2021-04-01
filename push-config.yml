@@ -1,7 +1,17 @@
 ---
-- name: Generate Router Configuration Files 
-  hosts: routers
+- name: Push Router Configuration Files on R1
+  hosts: R1
+  connection: network_cli
   gather_facts: no
 
   roles: 
-   - push-config
+   - push-config-R1
+
+
+- name: Push Router Configuration Files on R2 
+  hosts: R2
+  connection: network_cli
+  gather_facts: no
+
+  roles: 
+   - push-config-R2

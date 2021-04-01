@@ -3,3 +3,7 @@ providers:
   username: cisco
   password: cisco12345
   host: "{{ inventory_hostname }}"
+
+ansible_network_os: ios
+ansible_user: cisco 
+ansible_ssh_pass: cisco12345
