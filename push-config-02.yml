@@ -1,0 +1,8 @@
+---
+- name: Push Router Configuration Files to router inventory group
+  hosts: routers
+  connection: network_cli
+  gather_facts: no
+
+  roles: 
+   - push-config-02

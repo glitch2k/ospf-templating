@@ -1,0 +1,10 @@
+---
+- name: Push configuration files to routers in inventory group 
+  ios_config: 
+    src: "{{ inventory_hostname }}"
+
+- name: Unshut OSPF interface to routers in inventory group 
+  ios_config:
+    lines:
+      - no sh
+    parents: interface f0/0

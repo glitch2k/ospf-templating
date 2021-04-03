@@ -1,0 +1,9 @@
+---
+hostname: R1
+ospf_interface: f0/0
+ospf_interface_ipaddr: 12.12.12.1
+ospf_interface_ipaddr_mask: 255.255.255.0
+loop0_ipaddr: 1.1.1.1 
+loop0_ipaddr_mask: 255.255.255.255
+loop1_ipaddr: 1.1.1.2 
+loop1_ipaddr_mask: 255.255.255.255
